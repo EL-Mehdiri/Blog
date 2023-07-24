@@ -5,6 +5,7 @@ const blogRouter = require('./routes/blogRoutes');
 
 const app = express();
 
+
 const dbUrl = 'mongodb+srv://mehdi:qwer1234@nodeblogs.mafbltd.mongodb.net/node-blogs?retryWrites=true&w=majority';
 mongoose.connect(dbUrl)
     .then(result => app.listen(3000))
@@ -17,7 +18,7 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 app.use(morgan('dev'));
 
-//========================== routes 
+//===== routes 
 
 app.get('/', (req, res) => {
     res.redirect('/blogs')
