@@ -22,6 +22,9 @@
                             <h4>
                                 <%= blog.body %>
                             </h4>
+                            <p>
+                                <%= blog.createdAt.toISOString().replace(/T/, ' ' ).replace(/\..+/, '' ) %>
+                            </p>
                         </a>
                         <br>
 
